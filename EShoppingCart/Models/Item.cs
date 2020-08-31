@@ -18,7 +18,7 @@ namespace EShoppingCart.Models
         //If an item is preffered the item will be shown in the main page
         public bool IsPrefferedItem { get; set; }
         //InStock property Shows if the item is actually in stock or not. If the item is not in stock the view will be shown to the user
-        public int InStock { get; set; }
+        public bool InStock { get; set; }
         //This has only one category which means an item belongs to only one category but a category can have many items
         public int CategoryId { get; set; }
         public virtual Category Category { get; set; }
