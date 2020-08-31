@@ -1,0 +1,18 @@
+﻿@using EShoppingCart.Models
+@model IEnumerable<Item>
+
+<div>
+    <h2>
+        All Drinks are shown here
+    </h2>
+</div>
+
+@{
+    foreach (var item in Model)
+    {
+        <div>
+            <h4>Item Name : @item.Name</h4>
+            <p>Price : @item.Price.ToString("c")</p>
+        </div>
+    }
+ }

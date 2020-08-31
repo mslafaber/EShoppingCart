@@ -92,3 +92,4 @@ C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcore
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.dll
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.pdb
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.genruntimeconfig.cache
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\Razor\Views\Item\List.cshtml.g.cs

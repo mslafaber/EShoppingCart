@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EShoppingCart.Interfaces
 {
-    interface IItemRepository
+    public interface IItemRepository
     {
         //This first property will get all the Items
         IEnumerable<Item> Items { get; }

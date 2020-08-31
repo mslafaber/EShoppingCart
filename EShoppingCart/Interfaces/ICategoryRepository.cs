@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EShoppingCart.Interfaces
 {
-    interface ICategoryRepository
+    public interface ICategoryRepository
     {
         //This property is used to hold all categories.
         IEnumerable<Category> Categories { get; }
