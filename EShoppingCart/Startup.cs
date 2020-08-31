@@ -12,6 +12,10 @@ using EShoppingCart.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+//Added ones
+using EShoppingCart.Interfaces;
+using EShoppingCart.Models;
+using EShoppingCart.Mocks;
 
 namespace EShoppingCart
 {
@@ -34,6 +38,10 @@ namespace EShoppingCart
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            //following 2 services will add the interface and the implementation to that interface using the AddTransient method
+            services.AddTransient<IItemRepository, MockItemRepository>();
+            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
