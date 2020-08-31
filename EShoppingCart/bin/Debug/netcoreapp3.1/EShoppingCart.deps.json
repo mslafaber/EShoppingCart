@@ -29,6 +29,7 @@
           "Microsoft.AspNetCore.Identity.UI": "3.1.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.7",
           "Microsoft.EntityFrameworkCore.Tools": "3.1.7",
+          "bootstrap": "4.5.2",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -300,6 +301,13 @@
           "EShoppingCart.dll": {}
         }
       },
+      "bootstrap/4.5.2": {
+        "dependencies": {
+          "jQuery": "3.0.0",
+          "popper.js": "1.16.1"
+        }
+      },
+      "jQuery/3.0.0": {},
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.7": {
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll": {
@@ -845,6 +853,7 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "popper.js/1.16.1": {},
       "runtime.native.System/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.0.0",
@@ -3041,6 +3050,20 @@
       "serviceable": false,
       "sha512": ""
     },
+    "bootstrap/4.5.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-aO6V1YQtUqSBm+ClDdS5MkQoY6FtNjRvm2wBUesc4COvCFW9wZUE3OoHbJeuhNNOQxokMQALFHcQNJUNH9YoWw==",
+      "path": "bootstrap/4.5.2",
+      "hashPath": "bootstrap.4.5.2.nupkg.sha512"
+    },
+    "jQuery/3.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xFfntV19HzCtKdJWOp/XT9PUY3SslokTDDLFJZdBug36j1XVhw1+vPQ/n7Gd5y+jdpesn5B1m1yn1qIUq57jlA==",
+      "path": "jquery/3.0.0",
+      "hashPath": "jquery.3.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.7": {
       "type": "package",
       "serviceable": true,
@@ -3327,6 +3350,13 @@
       "sha512": "sha512-rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
       "path": "newtonsoft.json/12.0.2",
       "hashPath": "newtonsoft.json.12.0.2.nupkg.sha512"
+    },
+    "popper.js/1.16.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6GiVZho0vwBnId7pK7NLTjMGq4F0/VE65I08CCeKlarVoUt1w8SGTtJmhNo/0pK38EGUP/xbT4+OkWB8UTMPBw==",
+      "path": "popper.js/1.16.1",
+      "hashPath": "popper.js.1.16.1.nupkg.sha512"
     },
     "runtime.native.System/4.3.0": {
       "type": "package",

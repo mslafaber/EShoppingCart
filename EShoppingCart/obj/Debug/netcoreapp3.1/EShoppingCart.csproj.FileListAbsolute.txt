@@ -66,9 +66,6 @@ C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\bin\Debug\netcore
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.csprojAssemblyReference.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.AssemblyInfoInputs.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.AssemblyInfo.cs
-C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.csproj.CoreCompileInputs.cache
-C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.RazorAssemblyInfo.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.RazorAssemblyInfo.cs
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.TagHelpers.input.cache
@@ -93,3 +90,7 @@ C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcore
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.pdb
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.genruntimeconfig.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\Razor\Views\Item\List.cshtml.g.cs
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\bin\Debug\netcoreapp3.1\bower.json
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.csproj.CoreCompileInputs.cache
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\EShoppingCart\obj\Debug\netcoreapp3.1\EShoppingCart.MvcApplicationPartsAssemblyInfo.cache

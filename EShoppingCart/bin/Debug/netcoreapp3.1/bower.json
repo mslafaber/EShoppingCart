@@ -1,0 +1,20 @@
+{
+  "name": "EShoppingCart",
+  "homepage": "https://github.com/mslafaber/EShoppingCart",
+  "authors": [
+    "Melisha <mslafaber1@gmail.com>"
+  ],
+  "description": "Shopping Cart",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.7"
+  }
+}
