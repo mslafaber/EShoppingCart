@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using EShoppingCart.ViewModels;
 
 namespace EShoppingCart.Controllers
 {
@@ -22,8 +23,13 @@ namespace EShoppingCart.Controllers
         //Following method will return a list of Items so named it "List"
         public ViewResult List()
         {
+            ViewBag.Name = "DotNet, How?";
             var items = _itemRepository.Items;
-            return View(items);
+            ItemListViewModel vm = new ItemListViewModel();
+            vm.Items = _itemRepository.Items;
+            vm.CurrentCategory = "Item Category";
+
+            return View(vm);
         }
 
         /*public ViewResult List(string category)
