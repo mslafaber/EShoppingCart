@@ -16,6 +16,7 @@ using Microsoft.Extensions.Hosting;
 using EShoppingCart.Interfaces;
 using EShoppingCart.Models;
 using EShoppingCart.Mocks;
+using EShoppingCart.Repositories;
 
 namespace EShoppingCart
 {
@@ -26,6 +27,7 @@ namespace EShoppingCart
             Configuration = configuration;
         }
 
+        //The below IConfiguration method represents the entry point to configuration Data
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -40,8 +42,8 @@ namespace EShoppingCart
             services.AddRazorPages();
 
             //following 2 services will add the interface and the implementation to that interface using the AddTransient method
-            services.AddTransient<IItemRepository, MockItemRepository>();
-            services.AddTransient<ICategoryRepository, MockCategoryRepository>();
+            services.AddTransient<IItemRepository, ItemRepository>();
+            services.AddTransient<ICategoryRepository, CategoryRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +68,9 @@ namespace EShoppingCart
             app.UseAuthentication();
             app.UseAuthorization();
 
+            //following DbInitializer will check if the data is in the application or not.
+   
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
@@ -73,6 +78,7 @@ namespace EShoppingCart
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            DbInitializer.EnsurePopulated(app);
         }
     }
 }

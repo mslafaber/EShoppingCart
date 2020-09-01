@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "mzOciiTy7MwS0P/CUz8pZ0/UVyGfb/pmuBaYhWu9fBnpDJ74wb4on+9fHAROgnOL/yL84kVeRBiky5Flzuf5QQ==",
+  "dgSpecHash": "gbFz+u4wYlv7CEOsyQrzC9iOigE/ylGcvKEgB+nrlvpOxy/vGsFbjH+GUj3dIEQKkgwQDqkqQKWJwyBfgvaHFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Melisha Lafaber\\Documents\\EShoppingCart\\EShoppingCart\\EShoppingCart.csproj",
   "expectedPackageFiles": [
@@ -27,10 +27,14 @@
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.7\\microsoft.extensions.configuration.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.7\\microsoft.extensions.configuration.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.7\\microsoft.extensions.configuration.binder.3.1.7.nupkg.sha512",
+    "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.configuration.fileextensions\\3.1.7\\microsoft.extensions.configuration.fileextensions.3.1.7.nupkg.sha512",
+    "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.configuration.json\\3.1.7\\microsoft.extensions.configuration.json.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.7\\microsoft.extensions.dependencyinjection.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.7\\microsoft.extensions.dependencyinjection.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.7\\microsoft.extensions.fileproviders.abstractions.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.fileproviders.embedded\\3.1.7\\microsoft.extensions.fileproviders.embedded.3.1.7.nupkg.sha512",
+    "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.fileproviders.physical\\3.1.7\\microsoft.extensions.fileproviders.physical.3.1.7.nupkg.sha512",
+    "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.filesystemglobbing\\3.1.7\\microsoft.extensions.filesystemglobbing.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.identity.core\\3.1.7\\microsoft.extensions.identity.core.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.identity.stores\\3.1.7\\microsoft.extensions.identity.stores.3.1.7.nupkg.sha512",
     "C:\\Users\\Melisha Lafaber\\.nuget\\packages\\microsoft.extensions.logging\\3.1.7\\microsoft.extensions.logging.3.1.7.nupkg.sha512",
