@@ -35,5 +35,16 @@ namespace OnlineShopWebApp.Controllers
 
             return View(itemListViewModel);
         }
+
+        //view details of the item
+        public IActionResult Details(int id)
+        {
+            var item = _itemRepository.GetItemById(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return View(item);
+        }
     }
 }

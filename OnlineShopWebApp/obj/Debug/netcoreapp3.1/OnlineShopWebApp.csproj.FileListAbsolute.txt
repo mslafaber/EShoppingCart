@@ -73,3 +73,4 @@ C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\bin\Debug\netc
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\OnlineShopWebApp.csproj.CoreCompileInputs.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\OnlineShopWebApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Item\Details.cshtml.g.cs
