@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using OnlineShopWebApp.Models;
 
 namespace OnlineShopWebApp
 {
@@ -18,6 +19,11 @@ namespace OnlineShopWebApp
         {
             //below service adds controllers to the specified Iservices collection above and enables to use MVC pattern for controllers models and views in this project
             services.AddControllersWithViews();
+
+            //add own custom services as below
+            //Register interfaces with the corresponding repository that implements it.
+            services.AddScoped<ICategoryRepository, CategoryRepository>();
+            services.AddScoped<IItemRepository, ItemRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

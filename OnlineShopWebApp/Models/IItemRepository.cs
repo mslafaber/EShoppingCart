@@ -12,7 +12,7 @@ namespace OnlineShopWebApp.Models
         IEnumerable<Item> GetAllItems { get; }
 
         //Method to get all the Items that is on sale
-        IEnumerable<Item> GetItemOnSale { get; }
+        IEnumerable<Item> GetItemsOnSale { get; }
 
         //Method to get a single Item which matches to the ID that is passed to the URL
         Item GetItemById(int itemId);
