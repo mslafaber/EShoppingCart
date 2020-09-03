@@ -20,26 +20,3 @@ namespace OnlineShopWebApp.Models
         public IEnumerable<Category> GetAllCategories => _appDbContext.Categories;
     }
 }
-
-/*public IEnumerable<Category> GetAllCategories => new List<Category>
-        {
-            //Instatiates the category with the direct properties that the category needs
-            new Category
-            {
-                CategoryId=1,
-                CategoryName="Tech Products",
-                CategoryDescription="Technological Products which serve different functions"
-            },
-            new Category
-            {
-                CategoryId=2,
-                CategoryName="Books",
-                CategoryDescription="Physical Books and EBooks"
-            },
-            new Category
-            {
-                CategoryId=3,
-                CategoryName="Fashion Items",
-                CategoryDescription="Clothing, Footwear, Accessories and Formal Wear"
-            }
-        };*/
