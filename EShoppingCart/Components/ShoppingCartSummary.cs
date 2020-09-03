@@ -20,8 +20,7 @@ namespace EShoppingCart.Components
         //the below action is automatically used each time the component in invoked
         public IViewComponentResult Invoke()
         {
-            var items = new List<ShoppingCartItem>() { new ShoppingCartItem(), new ShoppingCartItem() };
-            //var items = _shoppingCart.GetShoppingCartItems();
+            var items = _shoppingCart.GetShoppingCartItems();
             _shoppingCart.ShoppingCartItems = items;
 
             var shoppingCartViewModel = new ShoppingCartViewModel

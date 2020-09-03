@@ -50,6 +50,7 @@ namespace EShoppingCart
             //from the below configurations if two users request the shopping cart at the same time they will get different instances
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped(sp => ShoppingCart.GetCart(sp));
+            services.AddScoped<IOrderRepository, OrderRepository>();
             services.AddMemoryCache();
             services.AddSession();
         }

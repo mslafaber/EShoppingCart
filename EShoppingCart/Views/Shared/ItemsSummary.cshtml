@@ -1,14 +1,21 @@
 ﻿@model Item
 
 <div class="col-md-4">
-             <img class="img-thumbnail embed-responsive-item" src="@Model.ItemImageThumbnailUrl" alt="" />
-                  <div class="caption">
-                      <h3 class="pull-right">
-                         @Model.Price.ToString("c")
-                      </h3>
-                      <h3>
-                         <a>@Model.Name</a>
-                      </h3>
-                      <p>@Model.ItemDescription</p>
-                  </div>
+    <img class="img-thumbnail embed-responsive-item" src="@Model.ItemImageThumbnailUrl" alt="" />
+    <div class="caption">
+        <h3 class="pull-right">
+            @Model.Price.ToString("c")
+        </h3>
+        <h3>
+            <a>@Model.Name</a>
+        </h3>
+        <p>@Model.ItemDescription</p>
+    </div>
+    <div class="addToCart text-right">
+        <p class="button ">
+            <a class="btn btn-success" id="cartButton" asp-controller="ShoppingCart" asp-action="AddToShoppingCart" asp-route-itemId="@Model.ItemId">
+                Add to cart
+            </a>
+        </p>
+    </div>
 </div>

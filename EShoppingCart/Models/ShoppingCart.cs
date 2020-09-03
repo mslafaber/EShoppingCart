@@ -114,7 +114,7 @@ namespace EShoppingCart.Models
             _appDbContext.SaveChanges();
         }
 
-        //below function will render the total amount for each item in the cart by calculating it as shown within the function
+        //below function will render the total amount for each item in the cart by calculating it as sh
         public decimal GetShoppingCartTotal()
         {
             var total = _appDbContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId)
