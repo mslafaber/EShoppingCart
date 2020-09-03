@@ -1,4 +1,4 @@
-﻿@model IEnumerable<OnlineShopWebApp.Models.Item>
+﻿@model OnlineShopWebApp.ViewModels.ItemListViewModel
 
 <html>
 <head>
@@ -8,7 +8,8 @@
     <title>Online Items Shop</title>
 </head>
 <body>
-    @foreach (var item in Model)
+    <h1>@Model.CurrentCategory</h1>
+    @foreach (var item in Model.Items)
     {
         <div>
             <h2>@item.Name</h2>

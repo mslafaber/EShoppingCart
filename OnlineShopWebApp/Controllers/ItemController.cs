@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using OnlineShopWebApp.Models;
+using OnlineShopWebApp.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,17 @@ namespace OnlineShopWebApp.Controllers
 
         //action methods are as below
 
-        public ViewResult List() 
+        public IActionResult List() 
         {
-            return View(_itemRepository.GetAllItems);
+            /*ViewBag.CurrentCategory = "BestSeller";
+            return View(_itemRepository.GetAllItems);*/
+
+            //get an instance of the view model
+            var itemListViewModel = new ItemListViewModel();
+            itemListViewModel.Items = _itemRepository.GetAllItems;
+            itemListViewModel.CurrentCategory = "Best Sellers";
+
+            return View(itemListViewModel);
         }
     }
 }
