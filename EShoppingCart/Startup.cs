@@ -17,6 +17,7 @@ using EShoppingCart.Interfaces;
 using EShoppingCart.Models;
 using EShoppingCart.Mocks;
 using EShoppingCart.Repositories;
+using Microsoft.AspNetCore.Http;
 
 namespace EShoppingCart
 {
@@ -44,6 +45,13 @@ namespace EShoppingCart
             //following 2 services will add the interface and the implementation to that interface using the AddTransient method
             services.AddTransient<IItemRepository, ItemRepository>();
             services.AddTransient<ICategoryRepository, CategoryRepository>();
+
+            //configure the sessions and created an object which is associated with a request
+            //from the below configurations if two users request the shopping cart at the same time they will get different instances
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,7 +70,7 @@ namespace EShoppingCart
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthentication();
@@ -73,6 +81,11 @@ namespace EShoppingCart
 
             app.UseEndpoints(endpoints =>
             {
+                //added an additional route to filter the Items according to the category
+                endpoints.MapControllerRoute(
+                    name: "categoryFilter",
+                    pattern: "Item/{action}/{category?}", defaults: new { Controller = "Item", action="List"});
+                
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");

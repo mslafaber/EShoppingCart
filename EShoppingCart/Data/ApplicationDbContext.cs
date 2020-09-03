@@ -16,5 +16,7 @@ namespace EShoppingCart.Data
 
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }
+
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
     }
 }

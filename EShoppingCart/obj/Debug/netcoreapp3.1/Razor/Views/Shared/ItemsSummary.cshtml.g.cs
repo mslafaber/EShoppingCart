@@ -34,7 +34,7 @@ using EShoppingCart.ViewModels;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"867f8a5458e22ea0b218913361fa8367f6122f6d", @"/Views/Shared/ItemsSummary.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"1e191d1fe739b6c6e3ed7cede16cfac49a4faf30", @"/Views/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9d0cfb7cf46006e81b44b8c8631f20b37eb96835", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared_ItemsSummary : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<Item>
     {
         #pragma warning disable 1998

@@ -6,32 +6,28 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using EShoppingCart.Models;
+using EShoppingCart.Interfaces;
+using EShoppingCart.ViewModels;
 
 namespace EShoppingCart.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
-
-        public HomeController(ILogger<HomeController> logger)
+        //following codes Inject the Item repository
+        private readonly IItemRepository _itemRepository;
+        public HomeController(IItemRepository itemRepository)
         {
-            _logger = logger;
+            _itemRepository = itemRepository;
         }
 
-        public IActionResult Index()
+        //The home page view will be returned fromt following function
+        public ViewResult Index()
         {
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
-            return View();
-        }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            var homeViewModel = new HomeViewModel
+            {
+                PreferredItems = _itemRepository.PreferredItems
+            };
+            return View(homeViewModel);
         }
     }
 }
