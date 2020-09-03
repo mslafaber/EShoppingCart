@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -7,9 +8,42 @@ namespace OnlineShopWebApp.Models
 {
     public class ItemRepository : IItemRepository
     {
-        //the category interface since the category is needed as a field to each item
-        private readonly ICategoryRepository _categoryRepository = new CategoryRepository();
-        //Property for getting all Items
+        //Use AppDbContext to get the db data
+        private readonly AppDbContext _appDbContext;
+
+        //to use the above field inject it to a constructor as shown below
+        public ItemRepository(AppDbContext appDbContext)
+        {
+            _appDbContext = appDbContext;
+        }
+
+        //method to get the Items from the dbset through the appDbContext
+        public IEnumerable<Item> GetAllItems
+        {
+            get 
+            {
+                return _appDbContext.Items.Include(c => c.Category);
+            }
+        }
+
+        //Method to get all the items and all the categories each of the items but only the ones which are on sale
+        public IEnumerable<Item> GetItemsOnSale 
+        {
+            get
+            {
+                return _appDbContext.Items.Include(c => c.Category).Where(p => p.IsOnSale);
+            }
+        }
+
+        //below method will filter the Item that matches the Id by getting all items and matching the id through the dbset
+        public Item GetItemById(int itemId)
+        {
+            return _appDbContext.Items.FirstOrDefault(c => c.ItemId == itemId);
+        }
+    }
+}
+
+/*//Property for getting all Items
         public IEnumerable<Item> GetAllItems => new List<Item>
         {
             new Item
@@ -48,15 +82,5 @@ namespace OnlineShopWebApp.Models
                 IsOnSale=true,
                 ItemImageThumbnailUrl="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80"
             }
-        };
+        };*/
 
-        //Tests is everything is working fine
-        public IEnumerable<Item> GetItemsOnSale => throw new NotImplementedException();
-
-        //below method will filter the Item that matches the Id by getting all items and matching the id
-        public Item GetItemById(int itemId)
-        {
-            return GetAllItems.FirstOrDefault(c => c.ItemId == itemId);
-        }
-    }
-}

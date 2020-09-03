@@ -7,8 +7,21 @@ namespace OnlineShopWebApp.Models
 {
     public class CategoryRepository : ICategoryRepository
     {
-        //Property which returns all categories as a list
-        public IEnumerable<Category> GetAllCategories => new List<Category>
+        //Use AppDbContext to get the db data for categories
+        private readonly AppDbContext _appDbContext;
+
+        //to use the above field inject it to a constructor as shown below
+        public CategoryRepository(AppDbContext appDbContext)
+        {
+            _appDbContext = appDbContext;
+        }
+
+        //Property which returns all categories from the db
+        public IEnumerable<Category> GetAllCategories => _appDbContext.Categories;
+    }
+}
+
+/*public IEnumerable<Category> GetAllCategories => new List<Category>
         {
             //Instatiates the category with the direct properties that the category needs
             new Category
@@ -29,6 +42,4 @@ namespace OnlineShopWebApp.Models
                 CategoryName="Fashion Items",
                 CategoryDescription="Clothing, Footwear, Accessories and Formal Wear"
             }
-        };
-    }
-}
+        };*/
