@@ -18,6 +18,8 @@ namespace OnlineShopWebApp.Models
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderDetail> OrderDetails { get; set; }
 
         //Method used to populated data when the database runs for the first time.
         protected override void OnModelCreating(ModelBuilder modelBuilder)

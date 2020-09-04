@@ -41,6 +41,9 @@ namespace OnlineShopWebApp
 
             //register the cart as scoped so that the interaction with the shopping cart within the same request will use the same shopping cart
             services.AddScoped<ShoppingCart>(sc => ShoppingCart.GetCart(sc));
+            
+            //register the Interface or order with its corressponding repository
+            services.AddScoped<IOrderRepository, OrderRepository>();
 
             services.AddHttpContextAccessor();
             services.AddSession();
