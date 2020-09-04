@@ -23,7 +23,7 @@
                     <a class="nav-link" asp-controller="Home" asp-action="Index">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" asp-controller="Item" asp-action="List">All Items</a>
+                    <span class="nav-link">@await Component.InvokeAsync("CategoryMenu")</span>
                 </li>
                 <li class="nav-item">
                     @await Component.InvokeAsync("ShoppingCartSummary")

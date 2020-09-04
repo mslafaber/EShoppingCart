@@ -23,17 +23,27 @@ namespace OnlineShopWebApp.Controllers
 
         //action methods are as below
 
-        public IActionResult List() 
+        //folowing method will retrieve the items belonging to a certain category as selected from the dropdown list with the correct category name
+        public ViewResult List(string category) 
         {
-            /*ViewBag.CurrentCategory = "BestSeller";
-            return View(_itemRepository.GetAllItems);*/
+            IEnumerable<Item> items;
+            string currentCategory;
 
-            //get an instance of the view model
-            var itemListViewModel = new ItemListViewModel();
-            itemListViewModel.Items = _itemRepository.GetAllItems;
-            itemListViewModel.CurrentCategory = "Best Sellers";
-
-            return View(itemListViewModel);
+            if (string.IsNullOrEmpty(category))
+            {
+                items = _itemRepository.GetAllItems.OrderBy(c => c.ItemId);
+                currentCategory = "All Types of Items";
+            }
+            else 
+            {
+                items = _itemRepository.GetAllItems.Where(c => c.Category.CategoryName == category);
+                currentCategory = _categoryRepository.GetAllCategories.FirstOrDefault(currentCategory => currentCategory.CategoryName == category)?.CategoryName;
+            }
+            return View(new ItemListViewModel
+            {
+                Items = items,
+                CurrentCategory = currentCategory
+            });
         }
 
         //view details of the item
