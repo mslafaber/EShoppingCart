@@ -30,7 +30,8 @@
                 </li>
                 <li class="nav-item">
                     <span class="nav-link">@await Component.InvokeAsync("ShoppingCartSummary")</span>
-</li>
+                </li>
+                <partial name="_LoginPartial" />
             </ul>
         </div>
     </nav>
@@ -38,5 +39,6 @@
     <div class="container body-content" style="padding:10px;">
         @RenderBody()
     </div>
+    @RenderSection("Scripts", required: false);
 </body>
 </html>

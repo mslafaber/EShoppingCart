@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -31,6 +32,10 @@ namespace OnlineShopWebApp
                 options.UseSqlServer(Configuration.GetConnectionString
                     ("DefaultConnection"))
             );
+
+            //added identity services
+            services.AddDefaultIdentity<IdentityUser>().AddEntityFrameworkStores<AppDbContext>();
+
             //below service adds controllers to the specified Iservices collection above and enables to use MVC pattern for controllers models and views in this project
             services.AddControllersWithViews();
 
@@ -47,6 +52,8 @@ namespace OnlineShopWebApp
 
             services.AddHttpContextAccessor();
             services.AddSession();
+
+            services.AddRazorPages();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -66,6 +73,9 @@ namespace OnlineShopWebApp
 
             //enable mvc to respond
             app.UseRouting();
+            //added authentication
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
@@ -74,6 +84,8 @@ namespace OnlineShopWebApp
                     name: "default",
                     pattern: "{Controller=Home}/{action=Index}/{id?}"
                     );
+                //to map the razor pages
+                endpoints.MapRazorPages();
             });
         }
     }
