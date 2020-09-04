@@ -38,6 +38,12 @@ namespace OnlineShopWebApp
             //Register interfaces with the corresponding repository that implements it.
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IItemRepository, ItemRepository>();
+
+            //register the cart as scoped so that the interaction with the shopping cart within the same request will use the same shopping cart
+            services.AddScoped<ShoppingCart>(sc => ShoppingCart.GetCart(sc));
+
+            services.AddHttpContextAccessor();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -53,6 +59,7 @@ namespace OnlineShopWebApp
             app.UseHttpsRedirection();
             //will automarically search a directory in the app called wwwroot for all staticfiles default
             app.UseStaticFiles();
+            app.UseSession();
 
             //enable mvc to respond
             app.UseRouting();

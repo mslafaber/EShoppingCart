@@ -17,6 +17,7 @@ namespace OnlineShopWebApp.Models
         //specify which entities will be manages by dbsontext
         public DbSet<Item> Items { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         //Method used to populated data when the database runs for the first time.
         protected override void OnModelCreating(ModelBuilder modelBuilder)
