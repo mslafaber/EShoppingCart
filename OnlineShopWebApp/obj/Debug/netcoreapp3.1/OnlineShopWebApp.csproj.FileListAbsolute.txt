@@ -74,3 +74,6 @@ C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\bin\Debug\netc
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\OnlineShopWebApp.csproj.CoreCompileInputs.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\OnlineShopWebApp.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Item\Details.cshtml.g.cs
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_itemCard.cshtml.g.cs
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\Melisha Lafaber\Documents\EShoppingCart\OnlineShopWebApp\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Carousel.cshtml.g.cs
