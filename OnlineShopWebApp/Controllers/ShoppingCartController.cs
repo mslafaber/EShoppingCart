@@ -68,11 +68,11 @@ namespace OnlineShopWebApp.Controllers
             return RedirectToAction("Index");
         }
 
-        /*//action to clear the cart
+        //action to clear the cart
         public RedirectToActionResult ClearCart()
         {
             _shoppingCart.ClearCart();
             return RedirectToAction("Index");
-        }*/
+        }
     }
 }
